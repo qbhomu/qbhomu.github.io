@@ -35,6 +35,12 @@
             display: flex;
             flex-direction: column;
         }
+
+        #chat_error {
+            position: relative;
+            left: 40%;
+            z-index: 2;
+        }
     </style>
     <meta charset="utf-8" />
     <title>4box</title>
@@ -62,6 +68,7 @@
                 <div id="chatinput">
                     <input type="text" id="chat_input" placeholder="Send a message" />
                 </div>
+                <span hidden style="color:red; font-weight: bold;" id="chat_error">Too Fast!</span>
                 <span style="color:red; font-weight: bold;" id="name"></span>
                 <div id="send"></div>
                 <div id="change">
