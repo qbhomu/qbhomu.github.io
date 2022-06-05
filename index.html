@@ -33,22 +33,54 @@
         mozallowfullscreen="true"
         sandbox="allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> -->
-     
+
     <!-- <iframe id="yt_frame" height="300" width="300" src="http://www.youtube.com/channel/UCxLE_8tPMTxrNBJx3xO6M5Q?sub_confirmation=1&feature=subscribe-embed-click" scrolling="no" frameborder="0"
         allowtransparency="true" allowfullscreen="" webkitallowfullscreen="true" mozallowfullscreen="true"
         sandbox="allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>  -->
 
-        <iframe id="yt_frame" height="900" width="1000" src="https://player.twitch.tv/?channel=eric_homu&amp;parent=qbhomu.github.io&amp;controls=true" scrolling="no" frameborder="0"
-        allowtransparency="true" allowfullscreen="" webkitallowfullscreen="true" mozallowfullscreen="true"
+    <!-- <iframe id="yt_frame" height="200" width="200"
+        src="https://player.twitch.tv/?channel=eric_homu&amp;parent=qbhomu.github.io&amp;controls=true" scrolling="no"
+        frameborder="0" allowtransparency="true" allowfullscreen="" webkitallowfullscreen="true"
+        mozallowfullscreen="true"
         sandbox="allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> -->
 
     <!-- <div id="youtube_player"></div> -->
+    <div id="iframe_parent"></div>
 
 
 
     <script>
+        var parent = window.location.ancestorOrigins[1];
+        if (parent) {
+            console.log("Parent Exists");
+            var parent_parsed = parent.replace(/(^\w+:|^)\/\//, '');
+            var iframe = document.createElement('iframe');
+            iframe.id = "yt_frame";
+            iframe.height = "1000";
+            iframe.src = `https://player.twitch.tv/?channel=eric_homu&amp;parent=${parent_parsed}&amp;controls=true`;
+            iframe.scrolling = "no";
+            iframe.frameBorder = "no";
+            iframe.allowTransparency = "true";
+            iframe.allowFullscreen = "";
+            iframe.sandbox = "allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox";
+            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            document.getElementById("iframe_parent").appendChild(iframe);
+        } else {
+            console.log("Parent Doesn't Exist");
+            var iframe = document.createElement('iframe');
+            iframe.id = "yt_frame";
+            iframe.height = "1000";
+            iframe.src = `https://player.twitch.tv/?channel=eric_homu&amp;parent=qbhomu.github.io&amp;controls=true`;
+            iframe.scrolling = "no";
+            iframe.frameBorder = "no";
+            iframe.allowTransparency = "true";
+            iframe.allowFullscreen = "";
+            iframe.sandbox = "allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox";
+            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+            document.getElementById("iframe_parent").appendChild(iframe);
+        }
     </script>
 </body>
 
