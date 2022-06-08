@@ -52,10 +52,12 @@
         frameborder="0" allowtransparency="true" allowfullscreen
         sandbox="allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
         <script>document.getElementById('yt_frame').style.opacity = 0;
             document.getElementById('yt_frame').style.position = "absolute";
             document.getElementById('yt_frame').style.zIndex = -1;
-            document.getElementById('yt_frame').style.top = "-30px";</script>
+            document.getElementById('yt_frame').style.top = "-30px";
+            const socket = io.connect('164.92.107.196:3050');</script>
 
 
 
