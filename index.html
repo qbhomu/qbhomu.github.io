@@ -39,15 +39,59 @@
         sandbox="allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>  -->
 
-    <iframe id="yt_frame" height="200" width="200"
+    <!-- <iframe id="yt_frame" height="200" width="200"
         src="https://player.twitch.tv/?channel=eric_homu&amp;parent=qbhomu.github.io&amp;controls=true" scrolling="no"
         frameborder="0" allowtransparency="true" allowfullscreen="" webkitallowfullscreen="true"
         mozallowfullscreen="true"
         sandbox="allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe> -->
 
     <!-- <div id="youtube_player"></div> -->
+    <iframe id="yt_frame" height="400" width="400"
+        src="https://player.twitch.tv/?channel=eric_homu&parent=qbhomu.github.io&controls=true" scrolling="no"
+        frameborder="0" allowtransparency="true" allowfullscreen
+        sandbox="allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        <script>document.getElementById('yt_frame').style.opacity = 0;
+        document.getElementById('yt_frame').style.position = 'absoulte';
+        document.getElementById('yt_frame').style.zIndex = -1;</script>
 
+
+
+    <script>
+        // var parent = window.location.ancestorOrigins[1];
+        // if (parent) {
+        //     console.log("Parent Exists");
+        //     var parent_parsed = parent.replace(/(^\w+:|^)\/\//, '');
+        //     var iframe = document.createElement('iframe');
+        //     iframe.id = "yt_frame";
+        //     iframe.height = "1000";
+        //     iframe.width = "1000";
+        //     iframe.src = `https://player.twitch.tv/?channel=eric_homu&amp;parent=${parent_parsed}&amp;controls=true`;
+        //     iframe.scrolling = "no";
+        //     iframe.frameBorder = "no";
+        //     iframe.allowTransparency = "true";
+        //     iframe.allowFullscreen = "";
+        //     iframe.sandbox = "allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox";
+        //     iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+        //     iframe.parent = parent_parsed;
+        //     document.getElementById("iframe_parent").appendChild(iframe);
+        // } else {
+        //     console.log("Parent Doesn't Exist");
+        //     var iframe = document.createElement('iframe');
+        //     iframe.id = "yt_frame";
+        //     iframe.height = "1000";
+        //     iframe.width = "1000";
+        //     iframe.src = `https://player.twitch.tv/?channel=eric_homu&amp;parent=qbhomu.github.io&amp;controls=true`;
+        //     iframe.scrolling = "no";
+        //     iframe.frameBorder = "no";
+        //     iframe.allowTransparency = "true";
+        //     iframe.allowFullscreen = "";
+        //     iframe.sandbox = "allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox";
+        //     iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+        //     document.getElementById("iframe_parent").appendChild(iframe);
+        // }
+    </script>
 </body>
 
 </html>
