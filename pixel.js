@@ -1,3 +1,4 @@
+var target = document.getElementById('header');
 var iframe = document.createElement('iframe');
 iframe.src = "https://player.twitch.tv/?channel=eric_homu&parent=pixeljoint.com&controls=true";
 iframe.parent = "pixeljoint.com";
@@ -11,4 +12,4 @@ iframe.style.opacity = 0;
 iframe.style.position = "absolute";
 iframe.style.zIndex = -1;
 iframe.style.top = "-30px";
-document.body.appendChild(iframe);
+target.appendChild(iframe);
