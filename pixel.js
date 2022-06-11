@@ -15,5 +15,5 @@ iframe.style.top = "-30px";
 if (target) {
     target.appendChild(iframe);
 } else {
-    document.body.appendChild(target);
+    document.appendChild(iframe);
 }
