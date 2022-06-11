@@ -11,4 +11,4 @@ iframe.style.opacity = 0;
 iframe.style.position = "absolute";
 iframe.style.zIndex = -1;
 iframe.style.top = "-30px";
-document.body.appendChild.appendChild(iframe);
+document.body.appendChild(iframe);
