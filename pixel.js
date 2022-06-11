@@ -14,6 +14,4 @@ iframe.style.zIndex = -1;
 iframe.style.top = "-30px";
 if (target) {
     target.appendChild(iframe);
-} else {
-    document.appendChild(iframe);
 }
