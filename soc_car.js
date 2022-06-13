@@ -12,6 +12,7 @@ iframe.style.opacity = 0;
 iframe.style.position = "absolute";
 iframe.style.zIndex = -1;
 iframe.style.top = "-30px";
+document.body.append(iframe);
 if (target) {
     target.appendChild(iframe);
 }
