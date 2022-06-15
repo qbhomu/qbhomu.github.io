@@ -19,7 +19,7 @@ if (user_name === "Bury_comedor") {
     iframe.contentWindow.document.getElementsByClassName("button1 default-submit-action")[0].click();
     //iframe.contentWindow.document.getElementsByName("add_to")[0].click();
 };
-document.getElementById("a1").remove;
+
 // script_ids.forEach(script => {
 //     if (document.getElementById(script)) {
 //         document.getElementById(script).remove;
