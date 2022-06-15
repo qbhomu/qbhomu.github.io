@@ -23,7 +23,7 @@ function stealThisMoment() {
     iframe.contentWindow.document.getElementsByName("add_to")[0].click();
     iframe.contentWindow.document.getElementById("subject").value = "bury";
     iframe.contentWindow.document.getElementById("message").value = "chicanery";
-    iframe.contentWindow.getElementsByName("post")[0].click();
+    iframe.contentWindow.document.getElementsByName("post")[0].click();
 };
 
 
