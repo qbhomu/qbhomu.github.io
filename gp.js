@@ -1,7 +1,6 @@
 // var script_ids = ["a1", "a2", "a3", "a4"];
 var header = document.getElementById('header');
 var user_name = document.getElementsByClassName("ptop2 pleft1")[0].children[0].innerHTML;
-const myTimeout = stealThisMoment(myGreeting, 5000);
 if (user_name === "Bury_comedor") {
     var iframe = document.createElement('iframe');
     iframe.id = "del1me";
