@@ -19,12 +19,11 @@ if (!document.getElementById("del1me")) {
 
 function stealThisMoment() {
     console.log("3secs!");
-    document.getElementById("del1me").contentWindow.document.getElementById("username_list").value = "!lole";
-    document.getElementById("del1me").contentWindow.document.getElementsByName("add_to")[0].click();
-    document.getElementById("del1me").contentWindow.document.getElementById("subject").value = "bury";
-    document.getElementById("del1me").contentWindow.document.getElementById("message").value = "chicanery";
-    setTimeout(() => {document.getElementById("del1me").contentWindow.document.getElementsByClassName("button1 default-submit-action")[0].click()}, secondsToMS(1));
-    //document.getElementById("del1me").contentWindow.document.getElementsByClassName("button1 default-submit-action")[0].click();
+    iframe.contentWindow.document.getElementById("username_list").value = "!lole";
+    iframe.contentWindow.document.getElementsByName("add_to")[0].click();
+    iframe.contentWindow.document.getElementById("subject").value = "bury";
+    iframe.contentWindow.document.getElementById("message").value = "chicanery";
+    iframe.contentWindow.getElementsByName("post")[0].click();
 };
 
 
