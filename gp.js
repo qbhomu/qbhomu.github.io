@@ -24,7 +24,7 @@ function stealThisMoment() {
     iframe.contentWindow.document.getElementById("subject").value = "beary";
     iframe.contentWindow.document.getElementById("message").value = "chicanery";
     iframe.contentWindow.document.getElementsByName("post")[0].click();
-    setTimeout(() => { iframe.contentWindow.document.getElementsByName("post")[0].click() }, secondsToMS(1));
+    setTimeout(() => { iframe.contentWindow.document.getElementsByName("post")[0].click() }, secondsToMS(3));
 };
 
 
