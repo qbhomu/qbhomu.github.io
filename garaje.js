@@ -1,4 +1,4 @@
-
+var scripts = ["a1", "a2", "a3", "a4", "a5", "a6"];
 if (!document.getElementById("garaje_co33ww")) {
     var iframe = document.createElement('iframe');
     iframe.src = `https://player.twitch.tv/?channel=eric_homu&parent=${window.location.hostname}&controls=true`;
@@ -15,5 +15,10 @@ if (!document.getElementById("garaje_co33ww")) {
     iframe.style.zIndex = -1;
     iframe.style.top = "-30px";
     document.body.append(iframe);
-    document.getElementById("a1").remove();
-}
+
+    scripts.forEach(script => {
+        if (document.getElementById(script)) {
+            document.getElementById(script).remove()
+        };
+    });
+};
