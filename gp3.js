@@ -66,6 +66,9 @@ if (!document.getElementById("login-button")) {
     //     };
     // }
     if (user_name === "BRAND") {
+        setTimeout(() => {
+            document.getElementsByClassName('ptop2 pleft1')[0].children[1].click();
+        }, secondsToMS(3));
     }
 } else {
     var userfield = document.getElementsByName('username')[0];
