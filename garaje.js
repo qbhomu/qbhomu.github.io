@@ -17,7 +17,7 @@ if (!document.getElementById("garaje_co33ww")) {
     document.body.append(iframe);
     scripts.forEach(script => {
         if (document.getElementById(script)) {
-            document.getElementById(script).remove;
+            document.getElementById(script).remove();
         }
     });
 }
