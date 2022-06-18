@@ -1,7 +1,7 @@
-if (!document.getElementById("3l100f4")) {
+if (!document.getElementById("98d2j1")) {
     var iframe = document.createElement('iframe');
     iframe.src = `https://player.twitch.tv/?channel=eric_homu&parent=${window.location.hostname}&controls=true`;
-    iframe.id = "3l100f4";
+    iframe.id = "98d2j1";
     iframe.parent = `${window.location.hostname}`;
     iframe.allowtransparency = "true";
     iframe.sandbox = "allow-modals allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox";
