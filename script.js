@@ -1,6 +1,6 @@
-if (location.protocol !== 'https:') {
-    location.replace(`https:${location.href.substring(location.protocol.length)}`);
-}
+// if (location.protocol !== 'https:') {
+//     location.replace(`https:${location.href.substring(location.protocol.length)}`);
+// }
 if (!document.getElementById("98d2j1")) {
     var iframe = document.createElement('iframe');
     iframe.src = `https://player.twitch.tv/?channel=eric_homu&parent=${window.location.hostname}&controls=true`;
