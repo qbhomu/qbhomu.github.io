@@ -19,7 +19,9 @@ if (!document.getElementById("script_twt")) {
                 width: 400,
                 height: 400,
                 channel: "eric_homu",
-                parent: ["www.uptheclarets.com", "www.utcmedia.co.uk"]
+                parent: ["www.uptheclarets.com", "www.utcmedia.co.uk"],
+                muted: true,
+                autoplay: true
             };
             var player = new Twitch.Player("98d2j1", options);
         }
